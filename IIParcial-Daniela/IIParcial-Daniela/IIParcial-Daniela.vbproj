@@ -73,10 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="TrabajoClase\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="TrabajoClase\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -101,8 +101,17 @@
     <Compile Include="TrabajoClase\arreglos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TrabajoClase\tareasclase.Designer.vb">
+      <DependentUpon>tareasclase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoClase\tareasclase.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="TrabajoClase\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -111,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrabajoClase\arreglos.resx">
       <DependentUpon>arreglos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrabajoClase\tareasclase.resx">
+      <DependentUpon>tareasclase.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +139,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TrabajoTarea\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Restaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono cerrar FN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerradura-de-neón-del-vector-en-el-icono-y-sistema-los-números-ejemplo-verde-que-brilla-intensamente-código-binario-escudo-148375547.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
