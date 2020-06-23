@@ -101,6 +101,12 @@
     <Compile Include="TrabajoClase\arreglos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TrabajoClase\libretaahorro.Designer.vb">
+      <DependentUpon>libretaahorro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoClase\libretaahorro.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TrabajoClase\tareasclase.Designer.vb">
       <DependentUpon>tareasclase.vb</DependentUpon>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrabajoClase\arreglos.resx">
       <DependentUpon>arreglos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrabajoClase\libretaahorro.resx">
+      <DependentUpon>libretaahorro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrabajoClase\tareasclase.resx">
       <DependentUpon>tareasclase.vb</DependentUpon>

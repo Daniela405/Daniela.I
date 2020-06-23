@@ -69,5 +69,15 @@ Public Class Form1
         abrirFormulario(tareasclase)
     End Sub
 
+    Private Sub Button1_MouseHover(sender As Object, e As EventArgs) Handles Button1.MouseHover
+        tmensaje.SetToolTip(Button1, "Dar click para mostrar las opciones de trabajo en clase")
+        tmensaje.ToolTipTitle = "Descripcion"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 
+    Private Sub Button2_MouseHover(sender As Object, e As EventArgs) Handles Button2.MouseHover
+        tmensaje.SetToolTip(Button2, "Dar click para mostrar las opciones de trabajos tareas")
+        tmensaje.ToolTipTitle = "Descripcion"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
 End Class

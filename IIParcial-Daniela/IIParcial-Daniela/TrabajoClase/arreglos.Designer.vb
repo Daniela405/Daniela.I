@@ -22,6 +22,7 @@ Partial Class arreglos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.btnvender = New System.Windows.Forms.Button()
@@ -52,11 +53,14 @@ Partial Class arreglos
         Me.btnGenerarPrecio = New System.Windows.Forms.Button()
         Me.cmbComputadoras = New System.Windows.Forms.ComboBox()
         Me.btnGenerar = New System.Windows.Forms.Button()
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.tmensaje = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnLimpiar
@@ -372,10 +376,15 @@ Partial Class arreglos
         Me.btnGenerar.Text = "Generar Computador"
         Me.btnGenerar.UseVisualStyleBackColor = False
         '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
         'arreglos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ClientSize = New System.Drawing.Size(1305, 709)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.GroupBox5)
@@ -395,6 +404,7 @@ Partial Class arreglos
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -429,4 +439,6 @@ Partial Class arreglos
     Friend WithEvents btnGenerarPrecio As Button
     Friend WithEvents cmbComputadoras As ComboBox
     Friend WithEvents btnGenerar As Button
+    Friend WithEvents ErrorValidacion As ErrorProvider
+    Friend WithEvents tmensaje As ToolTip
 End Class
