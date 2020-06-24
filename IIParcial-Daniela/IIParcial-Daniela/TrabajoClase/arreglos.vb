@@ -113,7 +113,6 @@ Public Class arreglos
             e.Handled = True
         End If
     End Sub
-
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
         Dim computadoras(3) As String
         computadoras(0) = "Toshiba"

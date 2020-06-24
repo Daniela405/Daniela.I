@@ -186,9 +186,6 @@ Public Class libretaahorro
         End If
     End Sub
 
-    Private Sub txtid_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txtid.MaskInputRejected
-
-    End Sub
 
     Private Sub txtid_MouseHover(sender As Object, e As EventArgs) Handles txtid.MouseHover
         tmensaje.SetToolTip(txtid, "Ingrese su ID")
@@ -250,5 +247,9 @@ Public Class libretaahorro
         tmensaje.SetToolTip(Button2, "Click para realizar un retiro")
         tmensaje.ToolTipTitle = "Descripcion"
         tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
     End Sub
 End Class

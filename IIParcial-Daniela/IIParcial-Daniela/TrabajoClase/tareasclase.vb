@@ -21,4 +21,5 @@
         tmensaje.ToolTipTitle = "Descripcion"
         tmensaje.ToolTipIcon = ToolTipIcon.Info
     End Sub
+
 End Class

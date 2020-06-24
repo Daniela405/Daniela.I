@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TrabajoClase\trabajostarea.Designer.vb">
+      <DependentUpon>trabajostarea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoClase\trabajostarea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrabajoTarea\bolsasolidaria.Designer.vb">
+      <DependentUpon>bolsasolidaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoTarea\bolsasolidaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TrabajoClase\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="TrabajoClase\trabajostarea.resx">
+      <DependentUpon>trabajostarea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrabajoTarea\bolsasolidaria.resx">
+      <DependentUpon>bolsasolidaria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrabajoClase\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -146,9 +164,7 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TrabajoTarea\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Icono Maximizar.png" />
   </ItemGroup>

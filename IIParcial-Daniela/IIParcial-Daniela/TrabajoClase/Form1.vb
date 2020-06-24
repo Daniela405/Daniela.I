@@ -80,4 +80,8 @@ Public Class Form1
         tmensaje.ToolTipTitle = "Descripcion"
         tmensaje.ToolTipIcon = ToolTipIcon.Info
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        abrirFormulario(trabajostarea)
+    End Sub
 End Class
