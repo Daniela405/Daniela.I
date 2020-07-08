@@ -202,7 +202,9 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="script.txt" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icono Maximizar.png" />
   </ItemGroup>

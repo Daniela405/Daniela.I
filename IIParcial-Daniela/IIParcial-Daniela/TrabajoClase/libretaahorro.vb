@@ -157,9 +157,6 @@ Public Class libretaahorro
         End If
     End Sub
 
-
-
-
     Private Sub txtSaldo_Validating(sender As Object, e As CancelEventArgs) Handles txtSaldo.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.ErrorValidacion.SetError(sender, "")
