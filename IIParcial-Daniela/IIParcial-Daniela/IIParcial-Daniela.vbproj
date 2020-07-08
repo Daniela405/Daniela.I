@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -73,6 +73,31 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="examen\cliente.Designer.vb">
+      <DependentUpon>cliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="examen\cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="examen\conexion.vb" />
+    <Compile Include="examen\examen.Designer.vb">
+      <DependentUpon>examen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="examen\examen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="examen\examenII.Designer.vb">
+      <DependentUpon>examenII.vb</DependentUpon>
+    </Compile>
+    <Compile Include="examen\examenII.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="examen\producto.Designer.vb">
+      <DependentUpon>producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="examen\producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TrabajoClase\trabajostarea.Designer.vb">
       <DependentUpon>trabajostarea.vb</DependentUpon>
     </Compile>
@@ -96,6 +121,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -127,6 +153,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="examen\cliente.resx">
+      <DependentUpon>cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="examen\examen.resx">
+      <DependentUpon>examen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="examen\examenII.resx">
+      <DependentUpon>examenII.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="examen\producto.resx">
+      <DependentUpon>producto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrabajoClase\trabajostarea.resx">
       <DependentUpon>trabajostarea.vb</DependentUpon>
     </EmbeddedResource>

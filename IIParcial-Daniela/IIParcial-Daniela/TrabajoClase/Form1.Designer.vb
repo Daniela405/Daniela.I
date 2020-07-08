@@ -38,6 +38,7 @@ Partial Class Form1
         Me.timerMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.timerOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.tmensaje = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Barratitulo.SuspendLayout()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,6 +109,7 @@ Partial Class Form1
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.Button3)
         Me.PanelMenu.Controls.Add(Me.PictureBox1)
         Me.PanelMenu.Controls.Add(Me.Button1)
         Me.PanelMenu.Controls.Add(Me.Button2)
@@ -196,6 +198,22 @@ Partial Class Form1
         'timerOcultarMenu
         '
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button3.Location = New System.Drawing.Point(3, 377)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(220, 41)
+        Me.Button3.TabIndex = 10
+        Me.Button3.Text = "Examen"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -235,4 +253,5 @@ Partial Class Form1
     Friend WithEvents tmensaje As ToolTip
     Friend WithEvents Label1 As Label
     Friend WithEvents PROGRAMACIÓN As Label
+    Friend WithEvents Button3 As Button
 End Class
