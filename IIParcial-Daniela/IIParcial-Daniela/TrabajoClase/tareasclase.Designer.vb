@@ -30,22 +30,22 @@ Partial Class tareasclase
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.BackColor = System.Drawing.Color.Silver
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(86, 79)
+        Me.Button1.Location = New System.Drawing.Point(360, 248)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 60)
+        Me.Button1.Size = New System.Drawing.Size(223, 72)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Arreglos"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.Silver
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(306, 79)
+        Me.Button2.Location = New System.Drawing.Point(139, 90)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(190, 60)
+        Me.Button2.Size = New System.Drawing.Size(223, 72)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "Procedimientos"
         Me.Button2.UseVisualStyleBackColor = False

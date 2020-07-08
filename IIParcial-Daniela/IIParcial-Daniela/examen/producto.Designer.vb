@@ -22,6 +22,7 @@ Partial Class Producto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Producto))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtcodigo = New System.Windows.Forms.TextBox()
@@ -39,10 +40,13 @@ Partial Class Producto
         Me.btnagregar = New System.Windows.Forms.Button()
         Me.btnnuevo = New System.Windows.Forms.Button()
         Me.btnmodificar = New System.Windows.Forms.Button()
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.tmensaje = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -56,7 +60,7 @@ Partial Class Producto
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox2.Location = New System.Drawing.Point(30, 44)
+        Me.GroupBox2.Location = New System.Drawing.Point(144, 44)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(490, 247)
         Me.GroupBox2.TabIndex = 20
@@ -68,7 +72,7 @@ Partial Class Producto
         Me.txtcodigo.Location = New System.Drawing.Point(197, 40)
         Me.txtcodigo.Name = "txtcodigo"
         Me.txtcodigo.Size = New System.Drawing.Size(224, 30)
-        Me.txtcodigo.TabIndex = 16
+        Me.txtcodigo.TabIndex = 0
         '
         'Código
         '
@@ -100,7 +104,7 @@ Partial Class Producto
         Me.txtnombre.Location = New System.Drawing.Point(197, 90)
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(224, 30)
-        Me.txtnombre.TabIndex = 0
+        Me.txtnombre.TabIndex = 1
         '
         'Label3
         '
@@ -117,9 +121,9 @@ Partial Class Producto
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 352)
+        Me.GroupBox1.Location = New System.Drawing.Point(56, 352)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1331, 263)
+        Me.GroupBox1.Size = New System.Drawing.Size(907, 263)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Productos"
@@ -129,11 +133,11 @@ Partial Class Producto
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.Color.Black
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 49)
+        Me.DataGridView1.Location = New System.Drawing.Point(52, 49)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 62
         Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(1199, 172)
+        Me.DataGridView1.Size = New System.Drawing.Size(792, 172)
         Me.DataGridView1.TabIndex = 9
         '
         'GroupBox3
@@ -144,7 +148,7 @@ Partial Class Producto
         Me.GroupBox3.Controls.Add(Me.btnagregar)
         Me.GroupBox3.Controls.Add(Me.btnnuevo)
         Me.GroupBox3.Controls.Add(Me.btnmodificar)
-        Me.GroupBox3.Location = New System.Drawing.Point(576, 12)
+        Me.GroupBox3.Location = New System.Drawing.Point(690, 12)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(200, 318)
         Me.GroupBox3.TabIndex = 18
@@ -223,12 +227,16 @@ Partial Class Producto
         Me.btnmodificar.Text = "Modificar"
         Me.btnmodificar.UseVisualStyleBackColor = False
         '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
         'Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(1516, 681)
+        Me.ClientSize = New System.Drawing.Size(1041, 681)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
@@ -240,6 +248,7 @@ Partial Class Producto
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -260,4 +269,6 @@ Partial Class Producto
     Friend WithEvents btnagregar As Button
     Friend WithEvents btnnuevo As Button
     Friend WithEvents btnmodificar As Button
+    Friend WithEvents ErrorValidacion As ErrorProvider
+    Friend WithEvents tmensaje As ToolTip
 End Class

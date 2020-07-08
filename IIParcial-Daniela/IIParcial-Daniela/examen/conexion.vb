@@ -7,7 +7,9 @@ Public Class conexion
     Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet()
     Public da As SqlDataAdapter
+    Public adaptador As SqlDataAdapter
     Public comando As SqlCommand
+    Public dt As DataTable
 
     Public Sub conectar()
         Try
@@ -75,5 +77,6 @@ Public Class conexion
 
         End If
     End Function
+
 
 End Class

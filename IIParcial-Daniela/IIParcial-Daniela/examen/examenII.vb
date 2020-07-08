@@ -2,15 +2,25 @@
 Imports System.Data.SqlClient
 Public Class examenII
     Dim conexion As conexion = New conexion()
-    Public Sub mostrardatos()
-        conexion.consulta("select * from venta", "venta")
+    Public adaptador As SqlDataAdapter
+    Public dt As DataTable
+    Public cn As SqlConnection
 
-        DataGridView1.DataSource = conexion.ds.Tables("venta")
+
+    Public Sub mostrardatos()
+        conexion.consulta("select v.idVenta, v.cantidad,v.precio, c.nombre, p.nombreProducto from venta v
+		  inner join producto p
+		  on v.idProducto= p.idProducto
+		  inner join cliente c
+		  on v.idCliente= c.idCliente", "venta, producto, cliente")
+
+        DataGridView1.DataSource = conexion.ds.Tables("venta, producto, cliente")
+
 
     End Sub
     Private Sub btnagregar_Click(sender As Object, e As EventArgs) Handles btnagregar.Click
-        Try
-            Dim agregar As String = "insert into venta  values ('" + txtcodigoventa.Text + "','" + mskFecha.Text + "','" + txtprecio.Text + "','" + txtcantidad.Text + "','" + txtcliente.Text + "','" + txtproducto.Text + "')"
+
+        Dim agregar As String = "insert into venta  values ('" + txtcodigoventa.Text + "','" + mskFecha.Text + "','" + txtprecio.Text + "','" + txtcantidad.Text + "','" + txtcliente.Text + "','" + txtproducto.Text + "')"
             If (conexion.insertar(agregar)) Then
                 MessageBox.Show("Datos Agregados Correctamente")
                 mostrardatos()
@@ -18,9 +28,7 @@ Public Class examenII
                 MessageBox.Show("error al agregar")
 
             End If
-        Catch ex As Exception
-            MessageBox.Show("Dato ya existente")
-        End Try
+
 
 
 
@@ -87,6 +95,9 @@ Public Class examenII
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+
+
         Dim dgv As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
         txtcodigoventa.Text = dgv.Cells(0).Value.ToString()
         mskFecha.Text = dgv.Cells(1).Value.ToString()
@@ -173,6 +184,7 @@ Public Class examenII
     Private Sub examenII_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.conectar()
         mostrardatos()
+
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -192,10 +204,6 @@ Public Class examenII
         tmensaje.SetToolTip(txtcodigoventa, "Ingrese el codigo de la venta")
         tmensaje.ToolTipTitle = "Código Venta"
         tmensaje.ToolTipIcon = ToolTipIcon.Info
-    End Sub
-
-    Private Sub txtprecio_TextChanged(sender As Object, e As EventArgs) Handles txtprecio.TextChanged
-
     End Sub
 
     Private Sub txtprecio_MouseHover(sender As Object, e As EventArgs) Handles txtprecio.MouseHover
@@ -246,5 +254,18 @@ Public Class examenII
         tmensaje.SetToolTip(btnmodificar, "Click para agregar una nueva factura")
         tmensaje.ToolTipTitle = "Agregar"
         tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+
+    Private Sub txtprecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtprecio.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
     End Sub
 End Class

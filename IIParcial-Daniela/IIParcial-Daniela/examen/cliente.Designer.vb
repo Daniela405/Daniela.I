@@ -22,6 +22,7 @@ Partial Class cliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cliente))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnSalir = New System.Windows.Forms.Button()
@@ -41,10 +42,13 @@ Partial Class cliente
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.tmensaje = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -55,7 +59,7 @@ Partial Class cliente
         Me.GroupBox3.Controls.Add(Me.btnagregar)
         Me.GroupBox3.Controls.Add(Me.btnnuevo)
         Me.GroupBox3.Controls.Add(Me.btnmodificar)
-        Me.GroupBox3.Location = New System.Drawing.Point(580, 31)
+        Me.GroupBox3.Location = New System.Drawing.Point(627, 31)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(200, 318)
         Me.GroupBox3.TabIndex = 15
@@ -140,9 +144,9 @@ Partial Class cliente
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 371)
+        Me.GroupBox1.Location = New System.Drawing.Point(59, 371)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1331, 263)
+        Me.GroupBox1.Size = New System.Drawing.Size(863, 263)
         Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Clientes"
@@ -156,7 +160,7 @@ Partial Class cliente
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 62
         Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(1199, 172)
+        Me.DataGridView1.Size = New System.Drawing.Size(783, 172)
         Me.DataGridView1.TabIndex = 9
         '
         'GroupBox2
@@ -172,7 +176,7 @@ Partial Class cliente
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox2.Location = New System.Drawing.Point(48, 31)
+        Me.GroupBox2.Location = New System.Drawing.Point(95, 31)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(490, 247)
         Me.GroupBox2.TabIndex = 17
@@ -184,7 +188,7 @@ Partial Class cliente
         Me.txtcodigo.Location = New System.Drawing.Point(197, 40)
         Me.txtcodigo.Name = "txtcodigo"
         Me.txtcodigo.Size = New System.Drawing.Size(224, 30)
-        Me.txtcodigo.TabIndex = 16
+        Me.txtcodigo.TabIndex = 0
         '
         'Código
         '
@@ -232,7 +236,7 @@ Partial Class cliente
         Me.txtnombre.Location = New System.Drawing.Point(197, 90)
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(224, 30)
-        Me.txtnombre.TabIndex = 0
+        Me.txtnombre.TabIndex = 1
         '
         'Label3
         '
@@ -243,12 +247,16 @@ Partial Class cliente
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Nombre"
         '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
         'cliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(1466, 807)
+        Me.ClientSize = New System.Drawing.Size(1050, 807)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
@@ -260,6 +268,7 @@ Partial Class cliente
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -282,4 +291,6 @@ Partial Class cliente
     Friend WithEvents Label3 As Label
     Friend WithEvents txtcodigo As TextBox
     Friend WithEvents Código As Label
+    Friend WithEvents ErrorValidacion As ErrorProvider
+    Friend WithEvents tmensaje As ToolTip
 End Class

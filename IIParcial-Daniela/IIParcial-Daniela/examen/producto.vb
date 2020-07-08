@@ -90,4 +90,111 @@ Public Class Producto
             Me.Hide()
         End If
     End Sub
+
+    Private Sub txtcodigo_TextChanged(sender As Object, e As EventArgs) Handles txtcodigo.TextChanged
+
+    End Sub
+
+    Private Sub txtcodigo_Validating(sender As Object, e As CancelEventArgs) Handles txtcodigo.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+    End Sub
+
+    Private Sub txtnombre_Validating(sender As Object, e As CancelEventArgs) Handles txtnombre.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+    End Sub
+
+    Private Sub txtdescripcion_Validating(sender As Object, e As CancelEventArgs) Handles txtdescripcion.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+    End Sub
+
+    Private Sub txtcodigo_MouseHover(sender As Object, e As EventArgs) Handles txtcodigo.MouseHover
+        tmensaje.SetToolTip(txtcodigo, "Ingrese el codigo del producto")
+        tmensaje.ToolTipTitle = "Codigo"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+
+    Private Sub txtnombre_MouseHover(sender As Object, e As EventArgs) Handles txtnombre.MouseHover
+        tmensaje.SetToolTip(txtnombre, "Ingrese el nombre del producto")
+        tmensaje.ToolTipTitle = "Nombre"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtdescripcion_MouseHover(sender As Object, e As EventArgs) Handles txtdescripcion.MouseHover
+        tmensaje.SetToolTip(txtdescripcion, "Ingrese la descripcion del producto")
+        tmensaje.ToolTipTitle = "Descripcion"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnagregar_MouseHover(sender As Object, e As EventArgs) Handles btnagregar.MouseHover
+        tmensaje.SetToolTip(btnagregar, "Click para agregar un nuevo producto")
+        tmensaje.ToolTipTitle = "Agregar"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnbuscar_MouseHover(sender As Object, e As EventArgs) Handles btnbuscar.MouseHover
+        tmensaje.SetToolTip(btnbuscar, "Click para buscar un  producto")
+        tmensaje.ToolTipTitle = "Buscar"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnmodificar_MouseHover(sender As Object, e As EventArgs) Handles btnmodificar.MouseHover
+        tmensaje.SetToolTip(btnmodificar, "Click para modificar un producto")
+        tmensaje.ToolTipTitle = "Modificar"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnnuevo_MouseHover(sender As Object, e As EventArgs) Handles btnnuevo.MouseHover
+        tmensaje.SetToolTip(btnnuevo, "Click para limpiar las cajas de texto")
+        tmensaje.ToolTipTitle = "Limpiar"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btneliminar_MouseHover(sender As Object, e As EventArgs) Handles btneliminar.MouseHover
+        tmensaje.SetToolTip(btneliminar, "Click para eliminar un producto")
+        tmensaje.ToolTipTitle = "Eliminar"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnSalir_MouseHover(sender As Object, e As EventArgs) Handles btnSalir.MouseHover
+        tmensaje.SetToolTip(btnSalir, "Click para salir del programa")
+        tmensaje.ToolTipTitle = "Salir"
+        tmensaje.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtcodigo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcodigo.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtnombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnombre.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
 End Class

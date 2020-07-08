@@ -30,9 +30,10 @@ Partial Class examen
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.LightGray
-        Me.Button1.Location = New System.Drawing.Point(144, 75)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(490, 318)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(147, 60)
+        Me.Button1.Size = New System.Drawing.Size(224, 70)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Factura Venta"
         Me.Button1.UseVisualStyleBackColor = False
@@ -40,9 +41,10 @@ Partial Class examen
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.LightGray
-        Me.Button2.Location = New System.Drawing.Point(300, 182)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(269, 193)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(147, 60)
+        Me.Button2.Size = New System.Drawing.Size(224, 70)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Cliente"
         Me.Button2.UseVisualStyleBackColor = False
@@ -50,9 +52,10 @@ Partial Class examen
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.LightGray
-        Me.Button3.Location = New System.Drawing.Point(502, 262)
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(94, 63)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(147, 60)
+        Me.Button3.Size = New System.Drawing.Size(224, 70)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Producto"
         Me.Button3.UseVisualStyleBackColor = False

@@ -72,7 +72,7 @@ Partial Class examenII
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(152, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(490, 333)
         Me.GroupBox2.TabIndex = 1
@@ -231,9 +231,9 @@ Partial Class examenII
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 368)
+        Me.GroupBox1.Location = New System.Drawing.Point(32, 376)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1331, 263)
+        Me.GroupBox1.Size = New System.Drawing.Size(1003, 263)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listado de Factura"
@@ -243,11 +243,11 @@ Partial Class examenII
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.Color.Black
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 49)
+        Me.DataGridView1.Location = New System.Drawing.Point(48, 47)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 62
         Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(1199, 172)
+        Me.DataGridView1.Size = New System.Drawing.Size(885, 172)
         Me.DataGridView1.TabIndex = 9
         '
         'btnbuscar
@@ -270,7 +270,7 @@ Partial Class examenII
         Me.GroupBox3.Controls.Add(Me.btnagregar)
         Me.GroupBox3.Controls.Add(Me.btnnuevo)
         Me.GroupBox3.Controls.Add(Me.btnmodificar)
-        Me.GroupBox3.Location = New System.Drawing.Point(541, 27)
+        Me.GroupBox3.Location = New System.Drawing.Point(681, 27)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(200, 318)
         Me.GroupBox3.TabIndex = 14
@@ -298,7 +298,7 @@ Partial Class examenII
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(1623, 778)
+        Me.ClientSize = New System.Drawing.Size(1090, 778)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)

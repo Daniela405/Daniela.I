@@ -27,11 +27,11 @@ Partial Class trabajostarea
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.Silver
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(77, 85)
+        Me.Button2.Location = New System.Drawing.Point(256, 166)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(246, 60)
+        Me.Button2.Size = New System.Drawing.Size(265, 84)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "Bolsa Solidaria"
         Me.Button2.UseVisualStyleBackColor = False

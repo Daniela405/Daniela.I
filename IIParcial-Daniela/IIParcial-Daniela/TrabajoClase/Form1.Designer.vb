@@ -29,16 +29,15 @@ Partial Class Form1
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PanelCon = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PROGRAMACIÓN = New System.Windows.Forms.Label()
         Me.timerMostrarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.timerOcultarMenu = New System.Windows.Forms.Timer(Me.components)
         Me.tmensaje = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Barratitulo.SuspendLayout()
         CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,6 +118,22 @@ Partial Class Form1
         Me.PanelMenu.Size = New System.Drawing.Size(220, 552)
         Me.PanelMenu.TabIndex = 5
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button3.Location = New System.Drawing.Point(3, 377)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(220, 41)
+        Me.Button3.TabIndex = 10
+        Me.Button3.Text = "Examen"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.IIParcial_Daniela.My.Resources.Resources.cerradura_de_neón_del_vector_en_el_icono_y_sistema_los_números_ejemplo_verde_que_brilla_intensamente_código_binario_escudo_148375547
@@ -164,7 +179,6 @@ Partial Class Form1
         'PanelCon
         '
         Me.PanelCon.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.PanelCon.Controls.Add(Me.Label1)
         Me.PanelCon.Controls.Add(Me.PROGRAMACIÓN)
         Me.PanelCon.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelCon.Location = New System.Drawing.Point(220, 35)
@@ -172,47 +186,21 @@ Partial Class Form1
         Me.PanelCon.Size = New System.Drawing.Size(896, 552)
         Me.PanelCon.TabIndex = 6
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Tai Le", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(62, 256)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(779, 91)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "ENTORNOS VISUALES"
-        '
         'PROGRAMACIÓN
         '
         Me.PROGRAMACIÓN.AutoSize = True
         Me.PROGRAMACIÓN.Font = New System.Drawing.Font("Microsoft Tai Le", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PROGRAMACIÓN.Location = New System.Drawing.Point(134, 183)
+        Me.PROGRAMACIÓN.Location = New System.Drawing.Point(63, 183)
         Me.PROGRAMACIÓN.Name = "PROGRAMACIÓN"
-        Me.PROGRAMACIÓN.Size = New System.Drawing.Size(654, 91)
+        Me.PROGRAMACIÓN.Size = New System.Drawing.Size(779, 91)
         Me.PROGRAMACIÓN.TabIndex = 0
-        Me.PROGRAMACIÓN.Text = "PROGRAMACION "
+        Me.PROGRAMACIÓN.Text = "ENTORNOS VISUALES"
         '
         'timerMostrarMenu
         '
         '
         'timerOcultarMenu
         '
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button3.Location = New System.Drawing.Point(3, 377)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(220, 41)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "Examen"
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -251,7 +239,6 @@ Partial Class Form1
     Friend WithEvents btnCerrar As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents tmensaje As ToolTip
-    Friend WithEvents Label1 As Label
     Friend WithEvents PROGRAMACIÓN As Label
     Friend WithEvents Button3 As Button
 End Class
